@@ -1,0 +1,12 @@
+[user]
+	name = Christian Schmitt
+	email = chrischmo@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
