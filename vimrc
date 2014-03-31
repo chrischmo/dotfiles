@@ -24,6 +24,10 @@ syntax on                           " syntax highlighing
 filetype on                          " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
 
+" Solarized
+set background=dark
+colorscheme solarized
+
 " Validation
 let g:pyflakes_use_quickfix = 0 " turn off quickfix window
 

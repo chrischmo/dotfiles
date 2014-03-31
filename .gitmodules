@@ -51,3 +51,12 @@
 [submodule "vim/bundle/ropevim"]
 	path = vim/bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
+[submodule "vim/bundle/numbertoggle"]
+	path = vim/bundle/numbertoggle
+	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "vim/bundle/startify"]
+	path = vim/bundle/startify
+	url = https://github.com/mhinz/vim-startify
