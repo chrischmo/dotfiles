@@ -78,3 +78,7 @@
 	path = vim/bundle/startify
 	url = https://github.com/mhinz/vim-startify
 	ignore = dirty
+[submodule "vim/bundle/vimux"]
+	path = vim/bundle/vimux
+	url = https://github.com/benmills/vimux
+	ignore = dirty
