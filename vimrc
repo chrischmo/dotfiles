@@ -130,4 +130,4 @@ EOF
 
 " Custom commands
 " Write current python file and execute it
-map <F12> <Esc>:w<CR>:!python<Space>%:p<CR>
+map <F12> <Esc>:w<CR>:!echo -e "\n%:p is running..." && python %:p<CR>
