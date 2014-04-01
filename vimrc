@@ -3,6 +3,12 @@ filetype off
 execute pathogen#infect()
 call pathogen#helptags()
 
+" Remap <leader>
+map <Space> <Leader>
+" Workaround for showcmd
+nnoremap <Leader>x i
+set showcmd
+
 " Code folding
 set foldmethod=indent
 set foldlevel=99

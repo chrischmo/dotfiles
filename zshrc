@@ -75,3 +75,7 @@ fi
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# 256 color support
+export TERM='xterm-256color'
+
