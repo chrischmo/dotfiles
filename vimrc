@@ -37,6 +37,24 @@ set linespace=0 " No extra spaces between rows
 set nu " Line numbers on
 set showmatch " Show matching brackets/parenthesis
 
+" Tell vim to remember certain things when we exit
+"  '20  :  marks will be remembered for up to 20 previously edited files
+"  "100 :  will save up to 100 lines for each register
+"  :20  :  up to 20 lines of command-line history will be remembered
+"  %    :  saves and restores the buffer list
+"  n... :  where to save the viminfo files
+set viminfo='20,\"100,:20,%,n~/.viminfo
+function! ResCur()
+    if line("'\"") <= line("$")
+        normal! g`"
+        return 1
+    endif
+endfunction
+augroup resCur
+    autocmd!
+    autocmd BufWinEnter * call ResCur()
+augroup END
+
 " Search behaviour
 set incsearch " Find as you type search
 set hlsearch " Highlight search terms
