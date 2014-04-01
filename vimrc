@@ -30,7 +30,36 @@ syntax on                           " syntax highlighing
 filetype on                          " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
 
-" Solarized
+" Various display options
+set cursorline  " highlight current line
+set backspace=indent,eol,start " Backspace for dummies
+set linespace=0 " No extra spaces between rows
+set nu " Line numbers on
+set showmatch " Show matching brackets/parenthesis
+
+" Search behaviour
+set incsearch " Find as you type search
+set hlsearch " Highlight search terms
+set ignorecase " Case insensitive search
+set smartcase " Case sensitive when uc present
+
+" Scroll behaviour
+set scrolljump=5 " Lines to scroll when cursor leaves screen
+set scrolloff=3 " Minimum lines to keep above and below cursor
+
+" Formatting
+set nowrap " Do not wrap long lines
+set autoindent " Indent at the same level of the previous line
+set shiftwidth=4 " Use indents of 4 spaces
+set expandtab " Tabs are spaces, not tabs
+set tabstop=4 " An indentation every four columns
+set softtabstop=4 " Let backspace delete indent
+set nojoinspaces " Prevents inserting two spaces after punctuation on a join (J)
+
+" For when you forgot to sudo.. Really Write the file.
+cmap w!! w !sudo tee % >/dev/null
+
+" Theme
 set background=dark
 colorscheme solarized
 
@@ -55,20 +84,25 @@ nmap <leader>a <Esc>:Ack!
 
 " Statusline
 set laststatus=2
-set statusline=
-set statusline+=%<\ " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*\ " buffer number, and flags
-set statusline+=%-40f\ " relative path
-set statusline+=%= " seperate between right- and left-aligned
-set statusline+=%1*%y%*%*\ " file type
-set statusline+=%10(L(%l/%L)%)\ " line
-set statusline+=%2(C(%v/125)%)\ " column
-set statusline+=%P " percentage of file
-set statusline+=%{fugitive#statusline()}  " git integration
+set statusline=%<%f\ " Filename
+set statusline+=%w%h%m%r " Options
+set statusline+=%{fugitive#statusline()} " Git Hotness
+set statusline+=\ [%{&ff}/%Y] " Filetype
+set statusline+=\ [%{getcwd()}] " Current dir
+set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
+" set statusline=
+" set statusline+=%<\ " cut at start
+" set statusline+=%2*[%n%H%M%R%W]%*\ " buffer number, and flags
+" set statusline+=%-40f\ " relative path
+" set statusline+=%= " seperate between right- and left-aligned
+" set statusline+=%1*%y%*%*\ " file type
+" set statusline+=%10(L(%l/%L)%)\ " line
+" set statusline+=%2(C(%v/125)%)\ " column
+" set statusline+=%P " percentage of file
+" set statusline+=%{fugitive#statusline()}  " git integration
 
-" Test integration (nose)
-" TODO: set up
-" Example for django's manage.py: 
+" Test integration (nose) using MakeGreen
+" TODO: set up - example for django's manage.py: 
 " map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 
 " Test integration (py.test)
