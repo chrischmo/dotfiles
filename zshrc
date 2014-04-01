@@ -13,6 +13,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Aliases
 alias reloadzshrc=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias vimrc="vim ~/.vimrc"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
