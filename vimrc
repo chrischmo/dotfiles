@@ -148,4 +148,6 @@ EOF
 
 " Custom commands
 " Write current python file and execute it
-map <F12> <Esc>:w<CR>:!echo -e "\n%:p is running..." && python %:p<CR>
+map <F8> <Esc>:w<CR>:!echo -e "\n%:p is running..." && python %:p<CR>
+" Write current python file and execute doctest
+map <F5> <Esc>:w<CR>:!echo -e "\nDoctest for %:p is running..." && python -m doctest %:p<CR>
