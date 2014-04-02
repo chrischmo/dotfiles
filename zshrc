@@ -15,6 +15,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias reloadzshrc=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias vimrc="vim ~/.vimrc"
 alias extract="dtrx"
+alias update-submodules="git submodule foreach git pull origin master"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
