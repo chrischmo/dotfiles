@@ -79,7 +79,14 @@ cmap w!! w !sudo tee % >/dev/null
 
 " Theme
 set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 colorscheme solarized
+highlight clear SignColumn    " Make SignColumn match background
+highlight clear LineNr   " Current line number row will have same background color in relative mode
+
 
 " Validation
 let g:pyflakes_use_quickfix = 0 " turn off quickfix window
