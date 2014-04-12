@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
+# alias zshconfig="vim ~/.zshrc" # Not necessary - use 'zshrc' alias
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Aliases
@@ -54,7 +54,7 @@ alias update-submodules="git submodule foreach git pull origin master"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python common-aliases virtualenv virtualenvwrapper)
+plugins=(git python common-aliases virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
